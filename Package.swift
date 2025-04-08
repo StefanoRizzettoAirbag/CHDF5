@@ -2,7 +2,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "HDF5Wrapper",
+    name: "chdf5",
     products: [
         .library(name: "HDF5Wrapper", targets: ["HDF5Wrapper"]),
     ],
