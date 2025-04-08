@@ -2,30 +2,22 @@
 import PackageDescription
 
 let package = Package(
-    name: "CHDF5",
-    
+    name: "HDF5Wrapper",
     products: [
-        .library(name: "CHDF5", targets: ["CHDF5"]),
+        .library(name: "HDF5Wrapper", targets: ["HDF5Wrapper"]),
     ],
     targets: [
-        .target(name: "CHDF5",
-                path: ".",
-                publicHeadersPath: ".",
-                //publicHeadersPath: "/opt/homebrew/Cellar/hdf5/1.14.6/include",
-                cSettings: [
-                                .headerSearchPath("/opt/homebrew/Cellar/hdf5/1.14.6/include")
-                            ],
-                            linkerSettings: [
-                                .unsafeFlags(["-L/opt/homebrew/Cellar/hdf5/1.14.6/lib", "-lhdf5"])
-                            ]
-               )
-        /*
-        .systemLibrary(
-            name: "libhdf5",
-            path: "/opt/homebrew/Cellar/hdf5/1.14.6/lib",
-           
-            pkgConfig: "/opt/homebrew/Cellar/hdf5/1.14.6/lib/pkgconfig/hdf5.pc"
-        ),
-         */
+        .target(
+            name: "HDF5Wrapper",
+            dependencies: [],
+            path: "Sources/HDF5Wrapper",
+            publicHeadersPath: ".",
+            cSettings: [
+                .headerSearchPath("-I/opt/homebrew/Cellar/hdf5/1.14.6/include")
+            ],
+            linkerSettings: [
+                .unsafeFlags(["-L/opt/homebrew/Cellar/hdf5/1.14.6/lib", "-lhdf5"])
+            ]
+        )
     ]
 )

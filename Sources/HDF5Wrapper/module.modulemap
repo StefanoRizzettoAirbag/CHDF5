@@ -1,4 +1,4 @@
-module CHDF5 [system] {
+module HDF5Wrapper [system] {
     header "/opt/homebrew/Cellar/hdf5/1.14.6/include/H5ACpublic.h"
     header "/opt/homebrew/Cellar/hdf5/1.14.6/include/H5Ipublic.h"
     header "/opt/homebrew/Cellar/hdf5/1.14.6/include/H5Rpublic.h"
