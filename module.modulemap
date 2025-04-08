@@ -28,6 +28,7 @@ module CHDF5 [system] {
     header "/opt/homebrew/Cellar/hdf5/1.14.6/include/H5DOpublic.h"
     header "/opt/homebrew/Cellar/hdf5/1.14.6/include/H5Ppublic.h"
     header "/opt/homebrew/Cellar/hdf5/1.14.6/include/H5DSpublic.h"
+    header "/opt/homebrew/Cellar/hdf5/1.14.6/include/hdf5.h"
     link "hdf5"
     export *
 }
